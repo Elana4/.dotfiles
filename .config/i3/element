@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+monitor1=VNC-0
+
+
+#POLYBAR
+killall -q polybar
+while pgrep -x polybar >/dev/null; do sleep 1; done
+MONITOR=$monitor1 polybar -c ~/.config/polybar/polybar center &
+MONITOR=$monitor1 polybar -c ~/.config/polybar/polybar top &
+MONITOR=$monitor1 polybar -c ~/.config/polybar/polybar workspaces &
+
+
+#COMPTON
+killall -q compton
+while pgrep -x compton >/dev/null; do sleep 1; done
+compton --paint-on-overlay exchange --config ~/.config/compton/compton &
+
+
+#CONKY
+killall -q conky
+while pgrep -x conky >/dev/null; do sleep 1; done
+conky -c /home/mahr/.config/conky/conky &
+
+
+#DUNST
+killall -q dunst
+while pgrep -x dunst >/dev/null; do sleep 1; done
+dunst -config /home/mahr/.config/dunst/dunst

@@ -1,0 +1,98 @@
+[  1613.561] 
+X.Org X Server 1.19.6
+Release Date: 2017-12-20
+[  1613.561] X Protocol Version 11, Revision 0
+[  1613.561] Build Operating System: openSUSE SUSE LINUX
+[  1613.561] Current Operating System: Linux DEV-OpenSUSE 4.12.14-lp150.12.22-default #1 SMP Sat Oct 13 05:05:16 UTC 2018 (09415e8) x86_64
+[  1613.561] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.12.14-lp150.12.22-default root=UUID=04e8b2f7-d8a8-4464-b6f1-f372094afa4c resume=/dev/disk/by-id/scsi-14d5346542020202003284887abd04640a4c8c0b10d6734d2-part4 splash=silent quiet showopts
+[  1613.561] Build Date: 17 April 2018  12:00:00PM
+[  1613.561]  
+[  1613.561] Current version of pixman: 0.34.0
+[  1613.561] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[  1613.561] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[  1613.561] (==) Log file: "/home/mahr/.local/share/xorg/Xorg.0.log", Time: Thu Oct 25 08:59:27 2018
+[  1613.562] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[  1613.562] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[  1613.563] (==) No Layout section.  Using the first Screen section.
+[  1613.563] (==) No screen section available. Using defaults.
+[  1613.563] (**) |-->Screen "Default Screen Section" (0)
+[  1613.563] (**) |   |-->Monitor "<default monitor>"
+[  1613.563] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[  1613.563] (==) Automatically adding devices
+[  1613.563] (==) Automatically enabling devices
+[  1613.563] (==) Automatically adding GPU devices
+[  1613.564] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[  1613.564] (WW) The directory "/usr/share/fonts/Type1/" does not exist.
+[  1613.564] 	Entry deleted from font path.
+[  1613.564] (WW) The directory "/usr/share/fonts/100dpi" does not exist.
+[  1613.564] 	Entry deleted from font path.
+[  1613.564] (WW) The directory "/usr/share/fonts/ghostscript/" does not exist.
+[  1613.564] 	Entry deleted from font path.
+[  1613.564] (WW) The directory "/usr/share/fonts/cyrillic" does not exist.
+[  1613.564] 	Entry deleted from font path.
+[  1613.564] (WW) The directory "/usr/share/fonts/misc/sgi" does not exist.
+[  1613.564] 	Entry deleted from font path.
+[  1613.564] (==) FontPath set to:
+	/usr/share/fonts/misc:unscaled,
+	/usr/share/fonts/75dpi:unscaled,
+	/usr/share/fonts/truetype/,
+	built-ins
+[  1613.564] (==) ModulePath set to "/usr/lib64/xorg/modules"
+[  1613.564] (**) Extension "XFree86-DGA" is disabled
+[  1613.564] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[  1613.564] (II) Loader magic: 0x55fe07d27d00
+[  1613.564] (II) Module ABI versions:
+[  1613.564] 	X.Org ANSI C Emulation: 0.4
+[  1613.564] 	X.Org Video Driver: 23.0
+[  1613.564] 	X.Org XInput driver : 24.1
+[  1613.564] 	X.Org Server Extension : 10.0
+[  1613.574] (II) systemd-logind: took control of session /org/freedesktop/login1/session/c1
+[  1613.574] (II) no primary bus or device found
+[  1613.574] (II) LoadModule: "glx"
+[  1613.574] (II) Loading /usr/lib64/xorg/modules/extensions/libglx.so
+[  1613.614] (II) Module glx: vendor="X.Org Foundation"
+[  1613.614] 	compiled for 1.19.6, module version = 1.0.0
+[  1613.614] 	ABI class: X.Org Server Extension, version 10.0
+[  1613.614] (==) Matched modesetting as autoconfigured driver 0
+[  1613.614] (==) Matched fbdev as autoconfigured driver 1
+[  1613.614] (==) Matched vesa as autoconfigured driver 2
+[  1613.614] (==) Assigned the driver to the xf86ConfigLayout
+[  1613.614] (II) LoadModule: "modesetting"
+[  1613.615] (II) Loading /usr/lib64/xorg/modules/drivers/modesetting_drv.so
+[  1613.616] (II) Module modesetting: vendor="X.Org Foundation"
+[  1613.616] 	compiled for 1.19.6, module version = 1.19.6
+[  1613.616] 	Module class: X.Org Video Driver
+[  1613.616] 	ABI class: X.Org Video Driver, version 23.0
+[  1613.616] (II) LoadModule: "fbdev"
+[  1613.616] (II) Loading /usr/lib64/xorg/modules/drivers/fbdev_drv.so
+[  1613.618] (II) Module fbdev: vendor="X.Org Foundation"
+[  1613.618] 	compiled for 1.19.6, module version = 0.4.4
+[  1613.618] 	Module class: X.Org Video Driver
+[  1613.618] 	ABI class: X.Org Video Driver, version 23.0
+[  1613.618] (II) LoadModule: "vesa"
+[  1613.618] (II) Loading /usr/lib64/xorg/modules/drivers/vesa_drv.so
+[  1613.619] (II) Module vesa: vendor="X.Org Foundation"
+[  1613.619] 	compiled for 1.19.6, module version = 2.4.0
+[  1613.619] 	Module class: X.Org Video Driver
+[  1613.619] 	ABI class: X.Org Video Driver, version 23.0
+[  1613.619] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[  1613.619] (II) FBDEV: driver for framebuffer: fbdev
+[  1613.620] (II) VESA: driver for VESA chipsets: vesa
+[  1613.620] (EE) 
+Fatal server error:
+[  1613.620] (EE) parse_vt_settings: Cannot open /dev/tty0 (Permission denied)
+[  1613.620] (EE) 
+[  1613.620] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[  1613.620] (EE) Please also check the log file at "/home/mahr/.local/share/xorg/Xorg.0.log" for additional information.
+[  1613.620] (EE) 
+[  1613.620] (WW) xf86CloseConsole: KDSETMODE failed: Bad file descriptor
+[  1613.620] (WW) xf86CloseConsole: VT_GETMODE failed: Bad file descriptor
+[  1613.622] (EE) Server terminated with error (1). Closing log file.
