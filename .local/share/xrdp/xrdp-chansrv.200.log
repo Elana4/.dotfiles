@@ -1,10 +1,14 @@
-[20181026-14:59:59] [CORE ] main: app started pid 1759(0x000006df)
-[20181026-14:59:59] [INFO ] main: DISPLAY env var set to :200.0
-[20181026-14:59:59] [INFO ] main: using DISPLAY 200
-[20181026-14:59:59] [INFO ] channel_thread_loop: thread start
-[20181026-15:00:01] [INFO ] Socket 12: AF_UNIX connection received
-[20181026-15:00:01] [INFO ] send_init_response_message:
-[20181026-15:01:16] [INFO ] channel_thread_loop: trans_check_wait_objs error resetting
-[20181026-15:51:50] [INFO ] Socket 13: AF_UNIX connection received
-[20181026-15:51:50] [INFO ] send_init_response_message:
-[20181026-15:52:28] [INFO ] channel_thread_loop: trans_check_wait_objs error resetting
+[20181027-01:55:30] [CORE ] main: app started pid 2179(0x00000883)
+[20181027-01:55:30] [INFO ] main: DISPLAY env var set to :200.0
+[20181027-01:55:30] [INFO ] main: using DISPLAY 200
+[20181027-01:55:30] [INFO ] channel_thread_loop: thread start
+[20181027-01:55:32] [INFO ] Socket 12: AF_UNIX connection received
+[20181027-01:55:32] [INFO ] send_init_response_message:
+[20181027-01:56:17] [INFO ] channel_thread_loop: trans_check_wait_objs error resetting
+[20181027-02:10:24] [INFO ] Socket 13: AF_UNIX connection received
+[20181027-02:10:24] [INFO ] send_init_response_message:
+[20181027-02:38:07] [INFO ] channel_thread_loop: trans_check_wait_objs error resetting
+[20181027-22:40:40] [INFO ] Socket 13: AF_UNIX connection received
+[20181027-22:40:40] [INFO ] send_init_response_message:
+[20181027-22:41:08] [INFO ] nil_signal_handler: got signal 13
+[20181027-22:41:08] [INFO ] channel_thread_loop: trans_check_wait_objs error resetting

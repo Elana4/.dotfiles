@@ -1,0 +1,24 @@
+update(){
+	sudo -S zypper update
+}
+upgrade(){
+	sudo -S zypper upgrade
+}
+autoremove(){
+	sudo -S zypper autoremove
+}
+clean(){
+	sudo -S zypper clean
+}
+
+own(){
+	sudo -S chown -R $USER $1
+}
+
+exe(){
+	chmod +x $1
+}
+
+screen_size(){
+	xrandr | grep '*' | awk '{print $1;}'
+}
