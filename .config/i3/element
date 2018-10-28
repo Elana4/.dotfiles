@@ -14,7 +14,7 @@ MONITOR=$monitor1 polybar -c ~/.config/polybar/polybar workspaces &
 #COMPTON
 killall -q compton
 while pgrep -x compton >/dev/null; do sleep 1; done
-compton --paint-on-overlay exchange --config ~/.config/compton/compton &
+compton --paint-on-overlay --config ~/.config/compton/compton &
 
 
 #CONKY

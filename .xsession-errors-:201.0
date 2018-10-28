@@ -1,0 +1,4 @@
+/home/mahr/.fzf.bash: line 13: /home/mahr/.fzf/shell/key-bindings.bash: No such file or directory
+/bin/sh: feh: command not found
+E: [pulseaudio] pid.c: Daemon already running.
+E: [pulseaudio] main.c: pa_pid_file_create() failed.

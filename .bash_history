@@ -232,3 +232,18 @@ ls
 sudo reboot
 xrandr -q
 polybar -m
+pacmd list-sinks
+ls
+cd test
+cd tests
+cd alsa
+ls
+wget ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.7.tar.bz2
+ls
+ftp
+ftp ftp.alsa-project.org
+sudo yast
+pulseaudio
+reboot
+sudo reboot
+pulseaudio

@@ -69,7 +69,7 @@
 	tray-padding = 4
 
 	modules-left = TOP DRY NET
-	modules-right = volume cpu memory date
+	modules-right = pulseaudio cpu memory date
 
 
 
@@ -79,10 +79,10 @@
 	fixed-center = true
 	dpi = 96
 	bottom = false
-	width = 750
+	width = 650
 	height = ${settings.barheigh}
 	override-redirect = true
-	offset-x = 960
+	offset-x = 400
 	offset-y = ${settings.bargapp}
 	background = ${colors.background-alt}
 	foreground = ${colors.foreground}
@@ -258,8 +258,11 @@
 
 
 
-[module/alsa]
-	type = internal/alsa
+[module/pulseaudio]
+	type = internal/pulseaudio
+	sink = default
+	use-ui-max = true
+	interval = 5
 	format-volume = <ramp-volume><label-volume>
 	format-muted = <label-muted>
 	format-volume-foreground = ${colors.primary}
