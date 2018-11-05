@@ -26,7 +26,7 @@ conky.config = {
     --draw_shades = false,
     --extra_newline = false,
     font = 'NotoSansMonoCJKSC:size=12',
-    gap_x = 1470,
+    gap_x = 1590,
     gap_y = 50,
 	--http_refresh = false,
 	if_up_strictness = 'link',
@@ -70,38 +70,31 @@ conky.text = [[
 $color5${hr 2}
 ${alignc}${color0}${font ChessType:pixelsize=50}${time %I:%M}$font
 ${alignc}${time %d}$color ${time %B} ${time %Y}
-${alignc}${color5}${font ChessType:pixelsize=50}MAHR$font
 ${color0}Hostname: $alignr$nodename
-Processor: ${alignr}${execi 500 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq | cut -c 1-27}
+Processor: $alignr${execi 500 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq | cut -c 1-27}
 Kernel: $alignr$kernel
-Volume: ${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6}
 $color5${hr 2}
-${color0}${goto 5}$cpu% ${goto 37}${freq}mHz ${goto 109}${color0}${acpitemp}%${goto 132}${color0}$mem / $memmax
-${color0}${cpugraph 60,125 00ffff 00ff00} \
-${color0}${memgraph 60,125 00ffff 00ff00}
-${color0}CPU 1: $color0${cpu cpu1}% ${goto 50}${cpubar cpu1 16,75}  \
-${color0}CPU 5: ${alignr 5}$color0${cpu cpu5}% ${cpubar cpu5 16,75}
-${color0}CPU 2: $color0${cpu cpu2}% ${goto 50}${cpubar cpu2 16,75}  \
-${color0}CPU 6: ${alignr 5}$color0${cpu cpu6}% ${cpubar cpu6 16,75}
-${color0}CPU 3: $color0${cpu cpu3}% ${goto 50}${cpubar cpu3 16,75}  \
-${color0}CPU 7: ${alignr 5}$color0${cpu cpu7}% ${cpubar cpu7 16,75}
-${color0}CPU 4: $color0${cpu cpu4}% ${goto 50}${cpubar cpu4 16,75}  \
-${color0}CPU 8: ${alignr 5}$color0${cpu cpu8}% ${cpubar cpu8 16,75}
-${color0}Swap memory: $swap/$swapmax \
+${color0}${goto 15}$cpu% ${goto 50}${freq}mHz ${goto 125}${color0}${acpitemp}%${goto 185}${color0}$mem/$memmax
+${color0}${cpugraph 60,155 00ffff 00ff00} \
+${color0}${memgraph 60,155 00ffff 00ff00}
+${color0}CPU 1: $color0${cpu cpu1}% ${goto 85}${cpubar cpu1 16,73}  \
+${color0}CPU 2: $color0${cpu cpu2}% ${goto 245}${cpubar cpu2 16,73}
+${color0}CPU 3: $color0${cpu cpu3}% ${goto 85}${cpubar cpu3 16,73}  \
+${color0}CPU 4: $color0${cpu cpu4}% ${goto 245}${cpubar cpu4 16,73}
+${color0}Swap: $swap/$swapmax \
 ${color0} ${swapbar 12 00ff00 ff0000}
 $color5${hr 2}
- ${color0}${goto 60}/dev/sda2
- ${goto 40}${color0}${diskio_read sda2}\
- ${goto 85}${color0}R|${color0}|W\
- ${goto 140}${color0}${diskio_write sda2}
-${color0}${diskiograph_read 60,90 00ffff 00ff00} \
-${color0}${diskiograph_write 60,90 00ffff 00ff00}
-${color0}/dev/sda3
- ${goto 80}${color0}${diskio_read sda3}\
- ${goto 121}${color0}R|${color0}|W\
- ${goto 160}${color0}${diskio_write sda3}
-${color0}${diskiograph_read 30,125 00ffff 00ff00} \
-${color0}${diskiograph_write 30,125 00ffff 00ff00}
+ ${color0}${goto 50}/dev/sda2 ${goto 205} ${color0}/dev/sda3
+ ${goto 20}${color0}${diskio_read sda2}\
+ ${goto 65}${color0}R|${color0}|W\
+ ${goto 105}${color0}${diskio_write sda2}\
+ ${goto 180}${color0}${diskio_read sda3}\
+ ${goto 223}${color0}R|${color0}|W\
+ ${goto 262}${color0}${diskio_write sda3}
+${color0}${diskiograph_read sda2 60,75 00ffff 00ff00} \
+${color0}${diskiograph_write sda2 60,75 00ffff 00ff00} \
+${color0}${diskiograph_read sda3 60,75 00ffff 00ff00} \
+${color0}${diskiograph_write sda3 60,75 00ffff 00ff00}
  ${color0}${fs_used /} /\
  ${color0}${fs_size /} \
  ${color0}${fs_bar 12 /} 
@@ -109,42 +102,26 @@ ${color0}${diskiograph_write 30,125 00ffff 00ff00}
  ${color0}${fs_size /home/mahr} \
  ${color0}${fs_bar 12 /home/mahr}
 $color5${hr 2}
-${color0}Highest CPU         PID   CPU% | \
-${color0}Highest MEM         PID   MEM%
-${color0} ${top     name 1} ${top     pid 1} ${top     cpu 1} | \
-${color0} ${top_mem name 1} ${top_mem pid 1} ${top_mem mem 1}
-${color0} ${top     name 2} ${top     pid 2} ${top     cpu 2} | \
-${color0} ${top_mem name 2} ${top_mem pid 2} ${top_mem mem 2}
-${color0} ${top     name 3} ${top     pid 3} ${top     cpu 3} | \
-${color0} ${top_mem name 3} ${top_mem pid 3} ${top_mem mem 3}
-${color0} ${top     name 4} ${top     pid 4} ${top     cpu 4} | \
-${color0} ${top_mem name 4} ${top_mem pid 4} ${top_mem mem 4}
-${color0} ${top     name 5} ${top     pid 5} ${top     cpu 5} | \
-${color0} ${top_mem name 5} ${top_mem pid 5} ${top_mem mem 5}
-${color0} ${top     name 6} ${top     pid 6} ${top     cpu 6} | \
-${color0} ${top_mem name 6} ${top_mem pid 6} ${top_mem mem 6}
-${color0} ${top     name 7} ${top     pid 7} ${top     cpu 7} | \
-${color0} ${top_mem name 7} ${top_mem pid 7} ${top_mem mem 7}
-${color0} ${top     name 8} ${top     pid 8} ${top     cpu 8} | \
-${color0} ${top_mem name 8} ${top_mem pid 8} ${top_mem mem 8}
+${color0}Process Name ${goto 140}PID ${alignr}CPU%    MEM%
+${color0} ${top     name 1} ${goto 125} ${top     pid 1} ${goto 205} ${top     cpu 1} ${goto 265} ${top_mem mem 1}
+${color0} ${top     name 2} ${goto 125} ${top     pid 2} ${goto 205} ${top     cpu 2} ${goto 265} ${top_mem mem 2}
+${color0} ${top     name 3} ${goto 125} ${top     pid 3} ${goto 205} ${top     cpu 3} ${goto 265} ${top_mem mem 3}
+${color0} ${top     name 4} ${goto 125} ${top     pid 4} ${goto 205} ${top     cpu 4} ${goto 265} ${top_mem mem 4}
 $color5${hr 2}
 ${if_up eth0}\
- ${goto 40}${color0}T:${totaldown eth0} \
- ${goto 90}${color0}${downspeed eth0}\
- ${goto 121}↓${color0}↑ ${upspeed eth0}\
- ${goto 175}${color0}T:${totalup eth0}
-${color0}${downspeedgraph eth0 45,125 00ffff 00ff00} \
-${color0}${upspeedgraph eth0 45,125 00ffff 00ff00}
+ ${goto 50}${color0}${downspeed eth0}\
+ ${goto 145}↓${color0}↑ ${goto 220} ${upspeed eth0}
+${color0}${downspeedgraph eth0 60,150 00ffff 00ff00} \
+${color0}${upspeedgraph eth0 60,150 00ffff 00ff00}
 ${color0}ID: ${color0}eth0    \
 ${alignr}${color0}IP: ${addr eth0}
 ${endif}\
 $color5${hr 2}
-${color0}Outbound Connection ${alignr} Remote Service/Port${color}
+${color0}Outbound Connection ${alignr} Port${color}
 ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
 ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
 ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
-${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
-${color0}Inbound Connection ${alignr} Local Service/Port${color}
+${color0}Inbound Connection ${alignr} Port${color}
 ${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
 ${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
 $color5${hr 2}

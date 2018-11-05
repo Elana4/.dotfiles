@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-monitor1=VNC-0
+monitor1=rdp0
 
 
 #POLYBAR

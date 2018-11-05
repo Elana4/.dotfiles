@@ -35,9 +35,8 @@
 
     dmenu = /usr/bin/dmenu -p dunst:
     browser = /usr/bin/firefox -new-tab
-
-    frame_width = 1
-    frame_color = "6092BE"
+    frame-width = 1
+    frame-color = "6092BE"
     #color = "#6C6C6C"
 
 [shortcuts]

@@ -30,7 +30,7 @@ exec xset -r 23 #Tab
 #|||	SHOTRCUTS
 #########################################################################################################################################
 set $floater floating enable, resize set 1600 900
-set $float_center floating enable, resize set 1920 783, move position center
+set $float_center floating enable, resize set 1600 783, move position center
 set $scratch_move sticky enable, move scratchpad
 set $scratch_show scratchpad show, move position center
 
@@ -187,7 +187,7 @@ bindsym F7 --release workspace back_and_forth
 #########################################################################################################################################
 #|||	MONITORS
 #########################################################################################################################################
-set $monitor VNC-0
+set $monitor rdp0
 
 workspace $workspace1 output $monitor
 workspace $workspace2 output $monitor
@@ -247,7 +247,8 @@ bindsym $mod+$alt+n exec termop bmon NET
 #########################################################################################################################################
 bindsym $alt+Return exec "nautilus --new-window"
 #bindsym $mod+Return exec sakura -f "Cousine for Powerline 14" -x tmux
-bindsym $mod+Return exec urxvt -fn "xft:Cousine for Powerline:size=16" -e tmux
+#bindsym $mod+Return exec urxvt -fn "xft:Cousine for Powerline:size=16" -e tmux
+bindsym $mod+Return exec urxvt
 
 bindsym $mod+$ctl+$crcum exec $term
 bindsym $mod+$ctl+$acute exec $note

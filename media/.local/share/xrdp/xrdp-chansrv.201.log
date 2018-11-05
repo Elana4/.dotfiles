@@ -1,0 +1,7 @@
+[20181027-02:40:05] [CORE ] main: app started pid 24698(0x0000607a)
+[20181027-02:40:05] [INFO ] main: DISPLAY env var set to :201.0
+[20181027-02:40:05] [INFO ] main: using DISPLAY 201
+[20181027-02:40:05] [INFO ] channel_thread_loop: thread start
+[20181027-02:40:07] [INFO ] Socket 12: AF_UNIX connection received
+[20181027-02:40:07] [INFO ] send_init_response_message:
+[20181027-02:40:27] [INFO ] channel_thread_loop: trans_check_wait_objs error resetting

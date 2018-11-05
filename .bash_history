@@ -247,3 +247,9 @@ pulseaudio
 reboot
 sudo reboot
 pulseaudio
+$DISPLAY
+xrandr -q
+xit
+exit
+logout
+exit

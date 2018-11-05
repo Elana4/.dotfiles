@@ -79,7 +79,7 @@
 	fixed-center = true
 	dpi = 96
 	bottom = false
-	width = 650
+	width = 850
 	height = ${settings.barheigh}
 	override-redirect = true
 	offset-x = 400

@@ -1,0 +1,24 @@
+update(){
+	sudo -S apt update
+}
+upgrade(){
+	sudo -S apt upgrade
+}
+autoremove(){
+	sudo -S apt autoremove
+}
+clean(){
+	sudo -S apt clean
+}
+
+own(){
+	cat /home/bresilla/pass | sudo -S chown -R $USER $1
+}
+
+exe(){
+	chmod +x $1
+}
+
+screen_size(){
+	xrandr | grep '*' | awk '{print $1;}'
+}
